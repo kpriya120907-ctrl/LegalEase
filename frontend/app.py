@@ -5,11 +5,16 @@ from datetime import date
 import requests
 import streamlit as st
 from dotenv import load_dotenv
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 from backend.app.services.exporters import (
     format_docx,
     format_pdf,
     format_txt,
+    
 )
 from backend.app.utils.text import format_html_preview
 
